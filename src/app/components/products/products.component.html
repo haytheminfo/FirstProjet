@@ -1,0 +1,25 @@
+
+    <h1>Products</h1>
+
+<table class="table"*ngIf="products && products.length >0">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">color</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr *ngFor="let Product of products">
+        <th>{{Product.id}}</th>
+        <th>{{Product.name}}</th>
+        <th>{{Product.type}}</th>
+        <th>{{Product.color}}</th>
+        <th>{{Product.price}}</th>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="!products || products.length == 0">NO Products</p>
